@@ -1,0 +1,97 @@
+body{
+  background: black;
+}
+
+/* Campo */
+.campo{
+  width: 50%;
+  height: 30vh;
+  display: flex;
+}
+
+/* Pacman */
+.pacman {
+  width: 30%;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.pacman-arriba {
+  position: absolute;
+  top: 0;
+  background-color: #ff0;
+  height: 50%;
+  width: 100%;
+  border-radius: 100px 100px 0 0;
+  animation: arriba 1s infinite;
+}
+
+.pacman-abajo {
+  background-color: #ff0;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 100px 100px;
+  animation: abajo 1s infinite ;
+}
+
+.pacman-izquierda-permanente {
+  position: absolute;
+  background-color: #ff0;
+  top: 0; 
+  border-radius: 100px 0px 0px 100px;
+  height: 100%;
+  width: 50%;
+}
+
+@keyframes arriba {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes abajo {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+/* Fantasma */
+
+.fantasma {
+  width: 5%;
+  height: 20%;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  z-index: 1;
+  background: blue;
+  border-radius: 15px 15px 0px 0px;
+  animation: fantasma ;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.ojos {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15%;
+}
+
+@keyframes fantasma {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: -5%;
+  }
+}
+
